@@ -1,0 +1,78 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+span {
+  font-size: 60pt;
+  font-weight: 700;
+}
+
+html{
+   height: 100%;
+}
+
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   height: 100%;
+   background: rgb(255,226,138);
+background: linear-gradient(0deg, rgba(255,226,138,1) 0%, rgba(255,192,0,1) 100%);
+}
+
+.c-items{
+   background-color: rgb(255, 255, 255);
+   padding: 1rem;
+   border-radius: 20px;
+   position: relative;
+}
+
+.numbers {
+  padding: 50px;
+}
+
+#minutosLimite {
+  width: 6rem;
+  height: 4rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  padding: 0.7rem;
+  border-radius: 10px;
+}
+
+#minutosLimite:focus {
+  box-shadow: 0 0 0 0;
+  outline: 0;
+  border-radius: 10px;
+}
+
+#msgErroMinLimite {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+#msgErroMinLimite h4{
+   background-color: rgb(255, 193, 193);
+   padding: .8rem;
+   width: 50%;
+   text-align: center;
+   border-radius: 10px;
+   border: solid 1px red;
+   color: red;
+}
+
+#logoThiCode{
+   position: absolute;
+   top: 0;   
+   right: 0;
+   padding: 2rem;
+}
+
+#logoTimer{
+   position: absolute;
+   top: 0;
+   left: 0;
+   padding: 2rem;
+}
