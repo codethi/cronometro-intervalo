@@ -15,6 +15,7 @@ function limite() {
   if (minute == minLimite.value) {
     pause()
     sirene.play()
+    minLimite.disabled = false
   }
 }
 
