@@ -3,6 +3,7 @@ let minute = 0
 let second = 0
 let millisecond = 0
 let cron
+let startTime
 let sirene = new Audio("assets/audio/sirene.mp3")
 let minLimite = document.querySelector('#minutosLimite')
 let msgErroMinLimite = document.querySelector('#msgErroMinLimite')
@@ -21,6 +22,7 @@ function limite() {
 
 function start() {
   if (minLimite.value > 0) {
+    startTime = new Date();
     pause()
     cron = setInterval(() => {
       timer()
@@ -54,18 +56,17 @@ function reset() {
 }
 
 function timer() {
-  if ((millisecond += 10) == 1000) {
-    millisecond = 0
-    second++
-  }
-  if (second == 60) {
-    second = 0
-    minute++
-  }
-  if (minute == 60) {
-    minute = 0
-    hour++
-  }
+  millisecond = (new Date()) - startTime;
+
+  second = Math.floor(millisecond/1000);
+  millisecond %= 1000;
+
+  minute = Math.floor(second/60);
+  second %= 60;
+
+  hour = Math.floor(minute/60);
+  minute %= 60;
+
   document.getElementById('hour').innerText = returnData(hour)
   document.getElementById('minute').innerText = returnData(minute)
   document.getElementById('second').innerText = returnData(second)
